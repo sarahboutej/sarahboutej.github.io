@@ -1,532 +1,823 @@
-
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Welcome to Fooderise</title>
+  <title>Welcome to Sarah Boutej World!</title>
+  <link rel="stylesheet" href="./font/all.css" />
+  <link rel="stylesheet" type="text/css" href="./animation/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
   <script src="../../js/tailwind.js"></script>
+  <script src="../../js/alpin.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
-    extend: {
-      backgroundImage: {
-            'food-background': "linear-gradient(to right bottom, rgba(43, 108, 176, 0.9), rgba(43, 108, 176, 0.9)) ,url('../../img/food-bg.jpg')",
-      },
-      colors: {
-        red: {
-          '50': '#ffebee',
-          '100': '#ffcdd2',
-          '200': '#ef9a9a',
-          '300': '#e57373',
-          '400': '#ef5350',
-          '500': '#f44336',
-          '600': '#e53935',
-          '700': '#d32f2f',
-          '800': '#c62828',
-          '900': '#b71c1c',
-          'accent-100': '#ff8a80',
-          'accent-200': '#ff5252',
-          'accent-400': '#ff1744',
-          'accent-700': '#d50000',
-        },
-        purple: {
-          50: '#f3e5f5',
-          100: '#e1bee7',
-          200: '#ce93d8',
-          300: '#ba68c8',
-          400: '#ab47bc',
-          500: '#9c27b0',
-          600: '#8e24aa',
-          700: '#7b1fa2',
-          800: '#6a1b9a',
-          900: '#4a148c',
-          'accent-100': '#ea80fc',
-          'accent-200': '#e040fb',
-          'accent-400': '#d500f9',
-          'accent-700': '#aa00ff',
-        },
-        'deep-purple': {
-          50: '#ede7f6',
-          100: '#d1c4e9',
-          200: '#b39ddb',
-          300: '#9575cd',
-          400: '#7e57c2',
-          500: '#673ab7',
-          600: '#5e35b1',
-          700: '#512da8',
-          800: '#4527a0',
-          900: '#311b92',
-          'accent-100': '#b388ff',
-          'accent-200': '#7c4dff',
-          'accent-400': '#651fff',
-          'accent-700': '#6200ea',
-        },
-        teal: {
-          50: '#e0f2f1',
-          100: '#b2dfdb',
-          200: '#80cbc4',
-          300: '#4db6ac',
-          400: '#26a69a',
-          500: '#009688',
-          600: '#00897b',
-          700: '#00796b',
-          800: '#00695c',
-          900: '#004d40',
-          'accent-100': '#a7ffeb',
-          'accent-200': '#64ffda',
-          'accent-400': '#1de9b6',
-          'accent-700': '#00bfa5',
-        },
-        indigo: {
-          50: '#e8eaf6',
-          100: '#c5cae9',
-          200: '#9fa8da',
-          300: '#7986cb',
-          400: '#5c6bc0',
-          500: '#3f51b5',
-          600: '#3949ab',
-          700: '#303f9f',
-          800: '#283593',
-          900: '#1a237e',
-          'accent-100': '#8c9eff',
-          'accent-200': '#536dfe',
-          'accent-400': '#3d5afe',
-          'accent-700': '#304ffe',
-        },
-        pink: {
-          50: '#fce4ec',
-          100: '#f8bbd0',
-          200: '#f48fb1',
-          300: '#f06292',
-          400: '#ec407a',
-          500: '#e91e63',
-          600: '#d81b60',
-          700: '#c2185b',
-          800: '#ad1457',
-          900: '#880e4f',
-          'accent-100': '#ff80ab',
-          'accent-200': '#ff4081',
-          'accent-400': '#f50057',
-          'accent-700': '#c51162',
-        },
-        blue: {
-          50: '#e3f2fd',
-          100: '#bbdefb',
-          200: '#90caf9',
-          300: '#64b5f6',
-          400: '#42a5f5',
-          500: '#2196f3',
-          600: '#1e88e5',
-          700: '#1976d2',
-          800: '#1565c0',
-          900: '#0d47a1',
-          'accent-100': '#82b1ff',
-          'accent-200': '#448aff',
-          'accent-400': '#2979ff',
-          'accent-700': '#2962ff',
-        },
-        'light-blue': {
-          50: '#e1f5fe',
-          100: '#b3e5fc',
-          200: '#81d4fa',
-          300: '#4fc3f7',
-          400: '#29b6f6',
-          500: '#03a9f4',
-          600: '#039be5',
-          700: '#0288d1',
-          800: '#0277bd',
-          900: '#01579b',
-          'accent-100': '#80d8ff',
-          'accent-200': '#40c4ff',
-          'accent-400': '#00b0ff',
-          'accent-700': '#0091ea',
-        },
-        cyan: {
-          50: '#e0f7fa',
-          100: '#b2ebf2',
-          200: '#80deea',
-          300: '#4dd0e1',
-          400: '#26c6da',
-          500: '#00bcd4',
-          600: '#00acc1',
-          700: '#0097a7',
-          800: '#00838f',
-          900: '#006064',
-          'accent-100': '#84ffff',
-          'accent-200': '#18ffff',
-          'accent-400': '#00e5ff',
-          'accent-700': '#00b8d4',
-        },
-        gray: {
-          50: '#fafafa',
-          100: '#f5f5f5',
-          200: '#eeeeee',
-          300: '#e0e0e0',
-          400: '#bdbdbd',
-          500: '#9e9e9e',
-          600: '#757575',
-          700: '#616161',
-          800: '#424242',
-          900: '#212121',
-        },
-        'blue-gray': {
-          50: '#eceff1',
-          100: '#cfd8dc',
-          200: '#b0bec5',
-          300: '#90a4ae',
-          400: '#78909c',
-          500: '#607d8b',
-          600: '#546e7a',
-          700: '#455a64',
-          800: '#37474f',
-          900: '#263238',
-        },
-        green: {
-          50: '#e8f5e9',
-          100: '#c8e6c9',
-          200: '#a5d6a7',
-          300: '#81c784',
-          400: '#66bb6a',
-          500: '#4caf50',
-          600: '#43a047',
-          700: '#388e3c',
-          800: '#2e7d32',
-          900: '#1b5e20',
-          'accent-100': '#b9f6ca',
-          'accent-200': '#69f0ae',
-          'accent-400': '#00e676',
-          'accent-700': '#00c853',
-        },
-        'light-green': {
-          50: '#f1f8e9',
-          100: '#dcedc8',
-          200: '#c5e1a5',
-          300: '#aed581',
-          400: '#9ccc65',
-          500: '#8bc34a',
-          600: '#7cb342',
-          700: '#689f38',
-          800: '#558b2f',
-          900: '#33691e',
-          'accent-100': '#ccff90',
-          'accent-200': '#b2ff59',
-          'accent-400': '#76ff03',
-          'accent-700': '#64dd17',
-        },
-        lime: {
-          50: '#f9fbe7',
-          100: '#f0f4c3',
-          200: '#e6ee9c',
-          300: '#dce775',
-          400: '#d4e157',
-          500: '#cddc39',
-          600: '#c0ca33',
-          700: '#afb42b',
-          800: '#9e9d24',
-          900: '#827717',
-          'accent-100': '#f4ff81',
-          'accent-200': '#eeff41',
-          'accent-400': '#c6ff00',
-          'accent-700': '#aeea00',
-        },
-        amber: {
-          50: '#fff8e1',
-          100: '#ffecb3',
-          200: '#ffe082',
-          300: '#ffd54f',
-          400: '#ffca28',
-          500: '#ffc107',
-          600: '#ffb300',
-          700: '#ffa000',
-          800: '#ff8f00',
-          900: '#ff6f00',
-          'accent-100': '#ffe57f',
-          'accent-200': '#ffd740',
-          'accent-400': '#ffc400',
-          'accent-700': '#ffab00',
-        },
-        yellow: {
-          50: '#fffde7',
-          100: '#fff9c4',
-          200: '#fff59d',
-          300: '#fff176',
-          400: '#ffee58',
-          500: '#ffeb3b',
-          600: '#fdd835',
-          700: '#fbc02d',
-          800: '#f9a825',
-          900: '#f57f17',
-          'accent-100': '#ffff8d',
-          'accent-200': '#ffff00',
-          'accent-400': '#ffea00',
-          'accent-700': '#ffd600',
-        },
-        orange: {
-          50: '#fff3e0',
-          100: '#ffe0b2',
-          200: '#ffcc80',
-          300: '#ffb74d',
-          400: '#ffa726',
-          500: '#ff9800',
-          600: '#fb8c00',
-          700: '#f57c00',
-          800: '#ef6c00',
-          900: '#e65100',
-          'accent-100': '#ffd180',
-          'accent-200': '#ffab40',
-          'accent-400': '#ff9100',
-          'accent-700': '#ff6d00',
-        },
-        'deep-orange': {
-          50: '#fbe9e7',
-          100: '#ffccbc',
-          200: '#ffab91',
-          300: '#ff8a65',
-          400: '#ff7043',
-          500: '#ff5722',
-          600: '#f4511e',
-          700: '#e64a19',
-          800: '#d84315',
-          900: '#bf360c',
-          'accent-100': '#ff9e80',
-          'accent-200': '#ff6e40',
-          'accent-400': '#ff3d00',
-          'accent-700': '#dd2c00',
-        },
-        brown: {
-          50: '#efebe9',
-          100: '#d7ccc8',
-          200: '#bcaaa4',
-          300: '#a1887f',
-          400: '#8d6e63',
-          500: '#795548',
-          600: '#6d4c41',
-          700: '#5d4037',
-          800: '#4e342e',
-          900: '#3e2723',
+        extend: {
+          colors: {
+            primary: "#ff9f0d",
+            secondary: "#50782f",
+            default: "#484848",
+            title: "#717171",
+          },
+          dropShadow: {
+            "3xl": "0 0 14px rgba(0, 0, 0, 0.10)",
+            "4xl": "0 0 18px rgba(0, 0, 0, 0.19)",
+          },
+          backgroundImage: {
+            "hero-shape": "url('./img/hero-shape.png')",
+            "hero-2": "url('./img/hero-2.png')",
+            "about-shape": "url('./img/about-shape.png')",
+            "about-2": "url('./img/about-2.png')",
+            "testimonial-shape": "url('./img/testimonial-shape.png')",
+            "pattern-1": "url('./img/pattern-01.png')",
+            "footer-shape": "url('./img/footer-shape.png')",
+          },
         },
       },
-      spacing: {
-        '7': '1.75rem',
-        '9': '2.25rem',
-        '28': '7rem',
-        '80': '20rem',
-        '96': '24rem',
-      },
-      height: {
-        '1/2': '50%',
-      },
-      scale: {
-        '30': '.3',
-      },
-      boxShadow: {
-        outline: '0 0 0 3px rgba(101, 31, 255, 0.4)',
-      },
-    },
-  },
-  variants: {
-    scale: ['responsive', 'hover', 'focus', 'group-hover'],
-    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-    opacity: ['responsive', 'hover', 'focus', 'group-hover'],
-    backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
-  },
-  plugins: [],
-  }
+    };
   </script>
 </head>
 
 <body>
-  <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-    <div class="relative flex items-center justify-between">
-      <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-        <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
-          <rect x="3" y="1" width="7" height="12"></rect>
-          <rect x="3" y="17" width="7" height="6"></rect>
-          <rect x="14" y="1" width="7" height="6"></rect>
-          <rect x="14" y="11" width="7" height="12"></rect>
-        </svg>
-        <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Company</span>
-      </a>
-      <ul class="flex items-center hidden space-x-8 lg:flex">
-        <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Product</a></li>
-        <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Features</a></li>
-        <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Pricing</a></li>
-        <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">About us</a></li>
+  <!-- Navbar goes here -->
+  <nav class="fixed w-full z-50" id="navbar">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex mr-5 flex-auto">
+          <div>
+            <!-- Website Logo -->
+            <a href="#" class="flex items-center py-4 px-2">
+              <span class="font-semibold text-gray-800 text-3xl">foode<strong class="text-white lg:text-primary" id="logo-letter">R</strong>ise</span>
+              <span class="font-semibold text-primary text-3xl">.</span>
+            </a>
+          </div>
+          <!-- Primary Navbar items -->
+          <div id="hamburger-menu" class="hidden md:flex flex-col md:flex-row bg-white md:bg-inherit absolute md:relative w-auto top-16 md:top-0 shadow-lg md:shadow-none inset-x-4 md:inset-x-auto items-center space-x-4 ml-auto pb-4 md:pb-0">
+            <a href="#" class="py-4 px-2 text-gray-800 font-semibold">Home</a>
+            <a href="#" class="py-4 px-2 text-gray-800 font-semibold hover:text-gray-600">Services</a>
+            <a href="#" class="py-4 px-2 text-gray-800 font-semibold hover:text-gray-600">About</a>
+            <a href="#" class="py-4 px-2 text-gray-800 font-semibold hover:text-gray-600">Contact</a>
+            <button class="hidden md:flex relative transition transform hover:-translate-y-0.5">
+              <i class="fas fa-cart-shopping text-default text-lg"></i>
+              <span 
+                id="shopping-badge"
+                class="absolute w-2.5 h-2.5 bg-white rounded-full -right-1 top-0"></span>
+            </button>
+            <button
+              id="booking-btn"
+              class="hidden md:flex hover:shadow-xl transition transform hover:-translate-y-0.5 text-gray-900 font-bold bg-white rounded-full border border-white py-2 px-4">
+              Booking Now
+            </button>
+          </div>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center space-x-4">
+          <button class="relative transition transform hover:-translate-y-0.5">
+            <i class="fas fa-cart-shopping text-default text-lg"></i>
+            <span 
+              id="shopping-badge-mobile"
+              class="absolute w-2.5 h-2.5 bg-white rounded-full -right-1 top-0"></span>
+          </button>
+          <button id="hamburger-btn" class="outline-none mobile-menu-button" onclick="navToggle();">
+            <svg class="w-6 h-6 text-default" fill="none"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="hidden mobile-menu">
+      <ul class="">
+        <li class="active">
+          <a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a>
+        </li>
         <li>
-          <a
-            href="/"
-            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-            aria-label="Sign up"
-            title="Sign up"
-          >
-            Sign up
-          </a>
+          <a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500">Services</a>
+        </li>
+        <li>
+          <a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500">About</a>
+        </li>
+        <li>
+          <a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500">Contact Us</a>
         </li>
       </ul>
-      <!-- Mobile menu -->
-      <div class="lg:hidden">
-        <button aria-label="Open Menu" title="Open Menu" class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50">
-          <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
-            <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"></path>
-            <path fill="currentColor" d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"></path>
+    </div>
+  </nav>
+  <section
+    class="relative lg:min-h-screen pt-24 lg:pt-0 flex items-center bg-hero-shape bg-no-repeat bg-right-top lg:bg-auto bg-contain">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center justify-between">
+        <div class="space-y-7 order-2 lg:order-1 text-center lg:text-left wow animate__animated animate__fadeInLeft" data-wow-duration="1s">
+          <h1 class="text-3xl md:text-5xl font-bold text-black mt-4 md:mt-0">
+            Your Favorite Food delivered Hot and Fresh
+          </h1>
+          <p class="text-gray-800">
+            Vestibulum maximus egestas tortor nec volutpat. Suspendisse
+            lobortis lorem vel enim semper rutrum nulla ac dolor ullamcorper
+            aliquam.
+          </p>
+          <button
+            class="hover:shadow-xl hover:shadow-primary/40 transition transfort hover:-translate-y-1 bg-primary rounded-full px-6 py-3 text-white font-bold space-x-2">
+            <span>Order Now</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="order-1 lg:order-2 wow animate__animated animate__fadeInRight" data-wow-duration="1s">
+          <img src="./img/meal.png" />
+        </div>
+      </div>
+    </div>
+    <div class="hidden lg:block absolute -bottom-10 left-0 w-1/5 h-1/3 bg-hero-2 bg-no-repeat bg-contain" />
+  </section>
+  <section class="flex items-center space-y-7 my-16 lg:my-28">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-12">
+        <div class="w-full text-center space-y-3 bg-white rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl p-4 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+          <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+            <defs></defs>
+            <title>Clock</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Clock">
+                <path class="cls-1"
+                  d="M26.82 27.62l9-4.89a2.49 2.49 0 0 0 .79-3.44 2.5 2.5 0 0 0-3.44-.8l-9 4.89a2.49 2.49 0 0 0-.8 3.44 2.49 2.49 0 0 0 3.45.8z"
+                  id="id_104" style="fill: rgb(224, 166, 67)"></path>
+                <path class="cls-2"
+                  d="M25 0a25 25 0 1 0 25 25A25 25 0 0 0 25 0zm0 45a20 20 0 1 1 20-20 20 20 0 0 1-20 20z" id="id_105">
+                </path>
+                <path class="cls-2" d="M16.82 13.7a2.5 2.5 0 0 0-3.38 3.68l10.37 10a2.5 2.5 0 1 0 3.38-3.68z"
+                  id="id_106"></path>
+              </g>
+            </g>
           </svg>
-        </button>
-        <!-- Mobile menu dropdown 
-        <div class="absolute top-0 left-0 w-full">
-          <div class="p-5 bg-white border rounded shadow-sm">
-            <div class="flex items-center justify-between mb-4">
-              <div>
-                <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-                  <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
-                    <rect x="3" y="1" width="7" height="12"></rect>
-                    <rect x="3" y="17" width="7" height="6"></rect>
-                    <rect x="14" y="1" width="7" height="6"></rect>
-                    <rect x="14" y="11" width="7" height="12"></rect>
-                  </svg>
-                  <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Company</span>
-                </a>
+          <div>
+            <h3 class="font-bold text-gray-800 text-lg">
+              Today 10:00 am - 7:00 pm
+            </h3>
+            <p class="text-gray-600">Working hours</p>
+          </div>
+        </div>
+        <div class="w-full text-center space-y-3 bg-white rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl p-4 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+          <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+            <defs></defs>
+            <title>1</title>
+            <g id="Layer_10" data-name="Layer 10">
+              <path
+                d="M60.19,3.59,43.52,2h-.36L43,2l-.17,0L26.58,6.69,10.37,3.62A2,2,0,0,0,8,5.58v28a2,2,0,0,0,4,0V8l12.67,2.4V28.49a2,2,0,0,0,4,0V10.25l12.66-3.6V46.88L30.22,51.06a2,2,0,1,0,1.41,3.74l12-4.51,16.21,1.54H60a2,2,0,0,0,2-2V5.58A2,2,0,0,0,60.19,3.59ZM58,47.64l-12.67-1.2V6.2L58,7.4Z"
+                id="id_103"></path>
+              <path class="cls-1"
+                d="M21.5,61.5a2,2,0,0,1-1.86-1.26L15.1,48.9,3.76,44.36a2,2,0,0,1,.11-3.75l25.5-8.5a2,2,0,0,1,2.53,2.53l-8.5,25.5a2,2,0,0,1-1.84,1.37ZM10.31,42.67l7.07,2.83a2,2,0,0,1,1.11,1.11l2.83,7.07,5.51-16.53Z"
+                id="id_104" style="fill: rgb(255, 147, 15)"></path>
+            </g>
+          </svg>
+          <div>
+            <h3 class="font-bold text-gray-800 text-lg">
+              Mannouba centre ville
+            </h3>
+            <p class="text-gray-600">Get directions</p>
+          </div>
+        </div>
+        <div class="w-full text-center space-y-3 bg-white rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl p-4 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+          <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="33.83" height="50.03"
+            viewBox="0 0 33.83 50.03">
+            <defs></defs>
+            <title>Phone</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Phone">
+                <path class="cls-1"
+                  d="M32.57 40l-9.23-10.52a4.18 4.18 0 0 0-4.14-1.32l-.76.18a1.73 1.73 0 0 1-2-1 19.94 19.94 0 0 1-1.31-4.51 1.31 1.31 0 0 1 1-1.47A4.17 4.17 0 0 0 19 19a4.25 4.25 0 0 0 .33-2l-.95-12.3A5.05 5.05 0 0 0 11.77.24L5 2.84A6.91 6.91 0 0 0 .26 8.73C-1.2 22.21 3.58 37.37 13.78 47.48a2.29 2.29 0 0 0 3.66-.68l.06-.11a2.31 2.31 0 0 0-.5-2.63C8.1 35.19 3.91 22 4.84 10.21A3.66 3.66 0 0 1 7.4 7L12 5.11a1.36 1.36 0 0 1 1.75 1.19l.72 9.25a1.59 1.59 0 0 1-1.21 1.67l-1.56.38a2.43 2.43 0 0 0-1.82 2.71c.83 5.25 2 8.88 4.87 13.25a2.41 2.41 0 0 0 2.89.89l2.11-.85a1.58 1.58 0 0 1 1.8.46L28.23 42a1.35 1.35 0 0 1-.57 2.15l-3.74 1.32a2.36 2.36 0 0 0-1.35 3.25 2.35 2.35 0 0 0 2.93 1.2l5-1.8A5 5 0 0 0 32.57 40z"
+                  id="id_101" />
+                <path class="cls-2"
+                  d="M22.52 3.35a2.47 2.47 0 0 0 1.82 2.2 5 5 0 0 1 .73 9.45 2.48 2.48 0 0 0-1.46 2.47 2.52 2.52 0 0 0 3.56 2.07A10 10 0 0 0 25.72.75a2.51 2.51 0 0 0-3.2 2.6z"
+                  id="id_102" style="fill: rgb(245, 157, 35)" />
+              </g>
+            </g>
+          </svg>
+          <div>
+            <h3 class="font-bold text-gray-800 text-lg">+(216) 27 689 231</h3>
+            <p class="text-gray-600">Call online</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="relative my-16 lg:my-28 lg:py-24 bg-none lg:bg-about-shape bg-no-repeat bg-left-center bg-contain">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center gap-10">
+        <div class="wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+          <img src="./img/about-img.png" />
+        </div>
+        <div class="space-y-8 wow animate__animated animate__fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+          <div>
+            <span class="text-primary font-bold text-sm">About</span>
+            <h3 class="text-default text-3xl font-bold">
+              Food Is An Important Part Of A Balanced Diet
+            </h3>
+          </div>
+          <div class="space-y-4">
+            <p class="text-default">
+              Aliquam semper elit sit amet lorem commodo, at feugiat sapien
+              fermentum. Quisque iaculis, eros a interdum hendrerit, nulla
+              lectus suscipit nisi, vitae sagittis ipsum nunc id sem.
+            </p>
+            <p class="text-default">
+              Aliquam semper elit sit amet lorem commodo, at feugiat sapien
+              fermentum. Quisque iaculis, eros a interdum hendrerit, nulla
+              lectus suscipit nisi, vitae sagittis ipsum nunc id sem.
+            </p>
+            <p class="text-default">
+              Aliquam semper elit sit amet lorem commodo, at feugiat sapien
+              fermentum. Quisque iaculis, eros a interdum hendrerit, nulla
+              lectus suscipit nisi, vitae sagittis ipsum nunc id sem.
+            </p>
+          </div>
+          <button
+            class="hover:shadow-xl hover:shadow-primary/40 transition transfort hover:-translate-y-1 bg-primary rounded-full px-6 py-3 text-white font-bold space-x-2">
+            <span>Learn More</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hidden lg:block absolute -bottom-36 right-0 w-1/5 h-1/3 bg-about-2 bg-no-repeat bg-contain bg-right-bottom" />
+  </section>
+  <section class="my-16 lg:my-28 lg:py-24">
+    <div class="container mx-auto px-4 space-y-16">
+      <div class="flex flex-col items-center text-center space-y-8">
+        <div>
+          <span class="text-primary font-bold text-sm">Work</span>
+          <h3 class="text-default text-3xl font-bold">How It Works</h3>
+        </div>
+        <p class="text-default w-full lg:w-1/2">
+          Nullam laoreet arcu eu massa euismod, quis dictum massa sodales.
+          Proin eget scelerisque dui. Phasellus id enim lobortis, porta orci
+          at, viverra turpis.
+        </p>
+      </div>
+      <div class="flex flex-col lg:flex-row gap-12 items-center lg:items-stretch">
+        <div
+          class="flex flex-col flex-1 items-center bg-white rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl hover:drop-shadow-4xl px-6 py-12 space-y-4 cursor-pointer transition transform hover:-translate-y-2 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+          <i class="fa-solid fa-utensils text-primary text-7xl"></i>
+          <h6 class="font-bold text-title text-xl">Pick Meal</h6>
+          <p class="text-default text-light text-center">
+            Proin rhoncus ligula eu tincidunt cursus. Vestibulum orci nulla,
+            blandit vel convallis sit amet
+          </p>
+        </div>
+        <div
+          class="flex flex-col flex-1 items-center bg-white rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl hover:drop-shadow-4xl px-6 py-12 space-y-4 cursor-pointer transition transform hover:-translate-y-2 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+          <i class="fa-solid fa-hand-pointer text-primary text-7xl"></i>
+          <h6 class="font-bold text-title text-xl">Choose How Often</h6>
+          <p class="text-default text-light text-center">
+            Proin rhoncus ligula eu tincidunt cursus. Vestibulum orci nulla,
+            blandit vel convallis sit amet
+          </p>
+        </div>
+        <div
+          class="flex flex-col flex-1 items-center bg-white rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl hover:drop-shadow-4xl px-6 py-12 space-y-4 cursor-pointer transition transform hover:-translate-y-2 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+          <i class="fa-solid fa-truck-fast text-primary text-7xl"></i>
+          <h6 class="font-bold text-title text-xl">Fast Deliveries</h6>
+          <p class="text-default text-light text-center">
+            Proin rhoncus ligula eu tincidunt cursus. Vestibulum orci nulla,
+            blandit vel convallis sit amet
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="my-16 lg:my-24 lg:py-10">
+    <div class="container mx-auto px-4 space-y-16">
+      <div class="flex flex-col items-center text-center space-y-8">
+        <div>
+          <span class="text-primary font-bold text-sm">Menu</span>
+          <h3 class="text-default text-3xl font-bold">Explore Our Best Menu</h3>
+        </div>
+        <p class="text-default w-full lg:w-1/2">
+          Nullam laoreet arcu eu massa euismod, quis dictum massa sodales.
+          Proin eget scelerisque dui. Phasellus id enim lobortis, porta orci
+          at, viverra turpis.
+        </p>
+      </div>
+      <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-12">
+        <div class="bg-white space-y-4 rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+          <img src="./img/meal-1.jpg" class="rounded-tr-3xl rounded-bl-3xl w-full" alt="Food meal" />
+          <div class="px-4 pt-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h6 class="text-xl font-bold text-gray-80">
+                  Salad With Mozarella
+                </h6>
+                <span class="text-xl font-bold text-gray-80">8$</span>
               </div>
-              <div>
-                <button aria-label="Close Menu" title="Close Menu" class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                  <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                    <path
-                      fill="currentColor"
-                      d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
-                    ></path>
-                  </svg>
-                </button>
+              <span class="text-xs text-gray-700">Served with french fries + drink</span>
+            </div>
+            <p class="text-light text-gray-800">
+              Proin rhoncus ligula eu tincidunt cursus. Vestibulum orci nulla,
+              blandit vel convallis sit amet
+            </p>
+            <div class="flex items-center justify-between space-y-6">
+              <div class="space-x-1">
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+              </div>
+              <button
+                class="transform transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 bg-primary text-white px-10 py-2 rounded-tl-3xl -mr-4">
+                <i class="fa-solid fa-plus text-4xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white space-y-4 rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+          <img src="./img/meal-2.jpg" class="rounded-tr-3xl rounded-bl-3xl w-full" alt="Food meal" />
+          <div class="px-4 pt-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h6 class="text-xl font-bold text-gray-80">Past Meal</h6>
+                <span class="text-xl font-bold text-gray-80">18$</span>
+              </div>
+              <span class="text-xs text-gray-700">Served with french fries + drink</span>
+            </div>
+            <p class="text-light text-gray-800">
+              Proin rhoncus ligula eu tincidunt cursus. Vestibulum orci nulla,
+              blandit vel convallis sit amet
+            </p>
+            <div class="flex items-center justify-between space-y-6">
+              <div class="space-x-1">
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+              </div>
+              <button
+                class="transform transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 bg-primary text-white px-10 py-2 rounded-tl-3xl -mr-4">
+                <i class="fa-solid fa-plus text-4xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white space-y-4 rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+          <img src="./img/meal-3.jpg" class="rounded-tr-3xl rounded-bl-3xl w-full" alt="Food meal" />
+          <div class="px-4 pt-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h6 class="text-xl font-bold text-gray-80">Rose Muffin</h6>
+                <span class="text-xl font-bold text-gray-80">12$</span>
+              </div>
+              <span class="text-xs text-gray-700">Served with french fries + drink</span>
+            </div>
+            <p class="text-light text-gray-800">
+              Proin rhoncus ligula eu tincidunt cursus. Vestibulum orci nulla,
+              blandit vel convallis sit amet
+            </p>
+            <div class="flex items-center justify-between space-y-6">
+              <div class="space-x-1">
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+              </div>
+              <button
+                class="transform transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 bg-primary text-white px-10 py-2 rounded-tl-3xl -mr-4">
+                <i class="fa-solid fa-plus text-4xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-12">
+        <div class="bg-white space-y-4 rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+          <img src="./img/meal-4.jpg" class="rounded-tr-3xl rounded-bl-3xl w-full" alt="Food meal" />
+          <div class="px-4 pt-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h6 class="text-xl font-bold text-gray-80">
+                  Salad With Mozarella
+                </h6>
+                <span class="text-xl font-bold text-gray-80">8$</span>
+              </div>
+              <span class="text-xs text-gray-700">Served with french fries + drink</span>
+            </div>
+            <p class="text-light text-gray-800">
+              Proin rhoncus ligula eu tincidunt cursus. Vestibulum orci nulla,
+              blandit vel convallis sit amet
+            </p>
+            <div class="flex items-center justify-between space-y-6">
+              <div class="space-x-1">
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+              </div>
+              <button
+                class="transform transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 bg-primary text-white px-10 py-2 rounded-tl-3xl -mr-4">
+                <i class="fa-solid fa-plus text-4xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white space-y-4 rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+          <img src="./img/meal-5.jpg" class="rounded-tr-3xl rounded-bl-3xl w-full" alt="Food meal" />
+          <div class="px-4 pt-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h6 class="text-xl font-bold text-gray-80">Past Meal</h6>
+                <span class="text-xl font-bold text-gray-80">18$</span>
+              </div>
+              <span class="text-xs text-gray-700">Served with french fries + drink</span>
+            </div>
+            <p class="text-light text-gray-800">
+              Proin rhoncus ligula eu tincidunt cursus. Vestibulum orci nulla,
+              blandit vel convallis sit amet
+            </p>
+            <div class="flex items-center justify-between space-y-6">
+              <div class="space-x-1">
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+              </div>
+              <button
+                class="transform transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 bg-primary text-white px-10 py-2 rounded-tl-3xl -mr-4">
+                <i class="fa-solid fa-plus text-4xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white space-y-4 rounded-tr-3xl rounded-bl-3xl drop-shadow-3xl wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+          <img src="./img/meal-6.jpg" class="rounded-tr-3xl rounded-bl-3xl w-full" alt="Food meal" />
+          <div class="px-4 pt-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <h6 class="text-xl font-bold text-gray-80">Rose Muffin</h6>
+                <span class="text-xl font-bold text-gray-80">12$</span>
+              </div>
+              <span class="text-xs text-gray-700">Served with french fries + drink</span>
+            </div>
+            <p class="text-light text-gray-800">
+              Proin rhoncus ligula eu tincidunt cursus. Vestibulum orci nulla,
+              blandit vel convallis sit amet
+            </p>
+            <div class="flex items-center justify-between space-y-6">
+              <div class="space-x-1">
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+                <i class="fa-solid fa-star text-primary text-xl"></i>
+              </div>
+              <button
+                class="transform transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 bg-primary text-white px-10 py-2 rounded-tl-3xl -mr-4">
+                <i class="fa-solid fa-plus text-4xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="hover:shadow-xl hover:shadow-primary/40 transition transfort hover:-translate-y-1 bg-primary rounded-full px-6 py-3 text-white font-bold space-x-2 flex mx-auto">
+        <span>Read More</span>
+      </button>
+    </div>
+  </section>
+  <section class="relative my-16 lg:my-24 lg:py-10">
+    <div class="container mx-auto px-4 space-y-16">
+      <div class="flex flex-col items-center text-center space-y-8">
+        <div>
+          <span class="text-primary font-bold text-sm">Testimonial</span>
+          <h3 class="text-default text-3xl font-bold">What They Are Saying</h3>
+        </div>
+        <p class="text-default w-full lg:w-1/2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+
+      <div id="testimonialCaroussel" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
+        <div class="carousel-inner relative w-full overflow-hidden">
+          <div class="carousel-item active relative float-left w-full">
+            <img class="rounded-tr-3xl rounded-bl-3xl shadow-lg mb-6 mx-auto"
+              src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" alt="avatar" style="width: 150px" />
+            <div class="flex flex-wrap justify-center">
+              <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3 text-center">
+                <h5 class="text-lg font-bold mb-3">Maria Kate</h5>
+                <p class="font-medium text-gray-700 mb-4">Photographer</p>
+                <p class="text-gray-500 mb-6">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left"
+                    class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                      d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                    </path>
+                  </svg>In ac turpis justo. Vivamus auctor quam vitae odio feugiat
+                  pulvinar. Sed semper ligula sed lorem tincidunt dignissim.
+                  Nam sed cursus lectus. Proin non rutrum magna. Proin
+                  gravida, justo et imperdiet tristique, turpis nisi viverra
+                  est, nec posuere ex arcu sit amet erat. Sed a dictum sem.
+                  Duis pretium condimentum nulla.
+                </p>
+                <ul class="flex justify-center mb-0">
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                      </path>
+                    </svg>
+                  </li>
+                </ul>
               </div>
             </div>
-            <nav>
-              <ul class="space-y-4">
-                <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Product</a></li>
-                <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Features</a></li>
-                <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Pricing</a></li>
-                <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">About us</a></li>
-                <li>
-                  <a
-                    href="/"
-                    class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                    aria-label="Sign up"
-                    title="Sign up"
-                  >
-                    Sign up
-                  </a>
-                </li>
-              </ul>
-            </nav>
+          </div>
+          <div class="carousel-item relative float-left w-full">
+            <img class="rounded-tr-3xl rounded-bl-3xl shadow-lg mb-6 mx-auto"
+              src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" alt="avatar" style="width: 150px" />
+            <div class="flex flex-wrap justify-center">
+              <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3 text-center">
+                <h5 class="text-lg font-bold mb-3">John Doe</h5>
+                <p class="font-medium text-gray-700 mb-4">Web Developer</p>
+                <p class="text-gray-500 mb-6">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left"
+                    class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                      d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                    </path>
+                  </svg>
+                  Maecenas auctor, quam eget tincidunt pretium, felis diam
+                  semper turpis, sed scelerisque diam libero facilisis libero.
+                  Quisque vitae semper metus. Aliquam eu dui aliquam, faucibus
+                  metus quis, elementum nunc.
+                </p>
+                <ul class="flex justify-center mb-0">
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half-alt"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 536 512">
+                      <path fill="currentColor"
+                        d="M508.55 171.51L362.18 150.2 296.77 17.81C290.89 5.98 279.42 0 267.95 0c-11.4 0-22.79 5.9-28.69 17.81l-65.43 132.38-146.38 21.29c-26.25 3.8-36.77 36.09-17.74 54.59l105.89 103-25.06 145.48C86.98 495.33 103.57 512 122.15 512c4.93 0 10-1.17 14.87-3.75l130.95-68.68 130.94 68.7c4.86 2.55 9.92 3.71 14.83 3.71 18.6 0 35.22-16.61 31.66-37.4l-25.03-145.49 105.91-102.98c19.04-18.5 8.52-50.8-17.73-54.6zm-121.74 123.2l-18.12 17.62 4.28 24.88 19.52 113.45-102.13-53.59-22.38-11.74.03-317.19 51.03 103.29 11.18 22.63 25.01 3.64 114.23 16.63-82.65 80.38z">
+                      </path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item relative float-left w-full">
+            <img class="rounded-tr-3xl rounded-bl-3xl shadow-lg mb-6 mx-auto"
+              src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" alt="avatar" style="width: 150px" />
+            <div class="flex flex-wrap justify-center">
+              <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3 text-center">
+                <h5 class="text-lg font-bold mb-3">Anna Deynah</h5>
+                <p class="font-medium text-gray-700 mb-4">UX Designer</p>
+                <p class="text-gray-500 mb-6">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left"
+                    class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                      d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                    </path>
+                  </svg>Duis sagittis, turpis in ullamcorper venenatis, ligula nibh
+                  porta dui, sit amet rutrum enim massa in ante. Curabitur in
+                  justo at lorem laoreet ultricies. Nunc ligula felis,
+                  sagittis eget nisi vitae.
+                </p>
+                <ul class="flex justify-center mb-0">
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                      class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path fill="currentColor"
+                        d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                      </path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        -->
+        <button
+          class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+          type="button" data-bs-target="#testimonialCaroussel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+          type="button" data-bs-target="#testimonialCaroussel" data-bs-slide="next">
+          <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
-  </div>
-
-  <div class="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
-    <div class="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
-      <svg class="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block" viewBox="0 0 100 100" fill="currentColor" preserveAspectRatio="none slice">
-        <path d="M50 0H100L50 100H0L50 0Z"></path>
-      </svg>
-      <img
-        class="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-        src="../../img/hero-food.jpg"
-        alt=""
-      />
+    <div
+      class="hidden lg:block absolute -bottom-36 -left-6 w-1/5 h-1/3 bg-testimonial-shape bg-no-repeat bg-contain bg-left-bottom" />
+  </section>
+  <section class="bg-pattern-1 mt-16 lg:mt-24 lg:py-10 py-6">
+    <div class="container mx-auto px-4 space-y-16">
+      <div class="flex flex-col items-center text-center space-y-8">
+        <div>
+          <h3 class="text-default text-3xl font-bold flex flex-col items-center">
+            <span>Hove a Question In Mind?</span>
+            <span>Let Us Help You</span>
+          </h3>
+        </div>
+      </div>
+      <div class="block sm:flex space-x-0 space-y-4 sm:space-x-4 sm:space-y-0 justify-center">
+        <input class="placeholder:italic placeholder:text-slate-400 lg:w-1/3 w-full bg-white w-full border border-slate-300 rounded-full py-3 pl-9 pr-3 shadow-sm focus:outline-none focus:border-none focus:ring-0 sm:text-sm" placeholder="example@email.com" type="mail" name="emain"/>
+        <button
+        class="hover:shadow-xl hover:shadow-primary/40 w-full sm:w-auto  transition transfort hover:-translate-y-1 bg-primary rounded-full px-6 py-3 text-white font-bold space-x-2">
+        Send
+      </button>
+      </div>
     </div>
-    <div class="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
-      <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
-        <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-          Brand new
-        </p>
-        <h2 class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-          Everything you<br class="hidden md:block" />
-          can imagine
-          <span class="inline-block text-deep-purple-accent-400">is real</span>
-        </h2>
-        <p class="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
-        </p>
-        <div class="flex items-center">
-          <a
-            href="/"
-            class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-          >
-            Get started
+  </section>
+  <footer class="lg:py-24 py-10 bg-footer-shape bg-no-repeat bg-contain bg-right-bottom">
+    <div class="container mx-auto px-4 space-y-7">
+      <div class="flex flex-col lg:flex-row items-center justify-between">
+        <div class="w-full lg:w-1/3 flex flex-col lg:flex-row items-center">
+          <!-- Website Logo -->
+          <a href="#" class="flex items-center py-4 px-2">
+            <span class="font-semibold text-gray-800 text-2xl">foode<strong class="text-primary">R</strong>ise</span>
+            <span class="font-semibold text-primary text-2xl">.</span>
           </a>
-          <a href="/" aria-label="" class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700">Learn more</a>
+        </div>
+        <div class="w-full lg:w-2/3 flex flex-col sm:flex-row items-center justify-between">
+          <a href="" class="py-4 px-2 text-gray-800 font-semibold">Home</a>
+          <a href="" class="py-4 px-2 text-gray-800 font-semibold hover:text-gray-600">Services</a>
+          <a href="" class="py-4 px-2 text-gray-800 font-semibold hover:text-gray-600">About</a>
+          <a href="" class="py-4 px-2 text-gray-800 font-semibold hover:text-gray-600">Contact</a>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row justify-between space-y-7 lg:space-y-0">
+        <div class="flex items-center space-x-6 w-full lg:w-1/3 justify-center lg:justify-start">
+            <a href="https://www.facebook.com" target="blank">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-default w-6 h-6 hover:text-primary" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com" target="blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-default w-6 h-6 hover:text-primary" viewBox="0 0 16 16">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com" target="blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-default w-5 h-5 hover:text-primary" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg>
+            </a>
+            <a href="https://www.twitter.com" target="blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-default w-5 h-5 hover:text-primary" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+              </svg>
+            </a>
+        </div>
+        <div class="w-full lg:w-2/3 flex flex-col lg:flex-row items-center justify-between text-center lg:text-left space-y-4 lg:space-y-0">
+          <div>
+            <ul class="text-default space-y-2">
+              <li>
+                <a href="#" class="hover:text-primary">Quality</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary">Help</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary">Share</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="text-default space-y-2">
+              <li>
+                <a href="tel:0021627689231" class="hover:text-primary">(+216)27 689 231</a>
+              </li>
+              <li>
+                <a href="mailto:hello@food.com" class="hover:text-primary">hello@food.com</a>
+              </li>
+              <li>
+                <a href="mailto:press@food.com" class="hover:text-primary">press@food.com</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="text-default space-y-2">
+              <li>
+                <a href="#" class="hover:text-primary">Terms & conditions</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-      <div>
-        <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-          Brand new
-        </p>
-      </div>
-      <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-        <span class="relative inline-block">
-          <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
-            <defs>
-              <pattern id="9a29985a-fc16-419b-ae53-1670f5ca4491" x="0" y="0" width=".135" height=".30">
-                <circle cx="1" cy="1" r=".7"></circle>
-              </pattern>
-            </defs>
-            <rect fill="url(#9a29985a-fc16-419b-ae53-1670f5ca4491)" width="52" height="24"></rect>
-          </svg>
-          <span class="relative">The</span>
-        </span>
-        quick, brown fox jumps over a lazy dog
-      </h2>
-      <p class="text-base text-gray-700 md:text-lg">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
-      </p>
-    </div>
-    <div class="grid max-w-screen-lg gap-8 row-gap-5 mb-8 sm:grid-cols-2 lg:grid-cols-4 sm:mx-auto">
-      <img class="object-cover w-full h-56 rounded shadow-lg" src="../../img/meal1.jpg" alt="" />
-      <img class="object-cover w-full h-56 rounded shadow-lg" src="../../img/meal2.jpg" alt="" />
-      <img class="object-cover w-full h-56 rounded shadow-lg" src="../../img/meal3.jpg" alt="" />
-      <img class="object-cover w-full h-56 rounded shadow-lg" src="../../img/meal4.jpg" alt="" />
-    </div>
-    <div class="flex items-center sm:justify-center">
-      <a
-        href="/"
-        class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-      >
-        Sign up
-      </a>
-      <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
-    </div>
-  </div>
-  <div class="bg-food-background bg-fixed bg-cover bg-center">
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div class="max-w-screen-sm sm:text-center sm:mx-auto">
-        <a href="/" aria-label="View" class="inline-block mb-5 rounded-full sm:mx-auto">
-          <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg class="w-12 h-12 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-            </svg>
-          </div>
-        </a>
-        <h2 class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-          Chase ball of string eat
-        </h2>
-        <p class="text-base text-gray-700 md:text-lg sm:px-4">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
-        </p>
-        <hr class="w-full my-8 border-gray-300" />
-      </div>
-    </div>
-  </div>
-
+  </footer> 
+  <script type="text/javascript" src="./script/nav_scroll.js"></script>
+  <script type="text/javascript" src="./script/mobile_menu.js"></script>
+  <script type="text/javascript" src="./animation/wow.min.js"></script>
+  <script>
+    new WOW().init();
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 
 </html>
