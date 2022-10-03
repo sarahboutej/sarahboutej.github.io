@@ -42,10 +42,10 @@
           </div>
           <!-- Primary Navbar items -->
           <div id="hamburger-menu"
-            class="hidden md:flex flex-col md:flex-row bg-white md:bg-inherit absolute md:relative w-auto top-16 md:top-0 shadow-lg md:shadow-none inset-x-4 md:inset-x-auto items-center space-x-4 pb-4 md:pb-0">
-            <a href="#" class="py-4 px-2 text-white font-semibold">Home</a>
-            <a href="#service" class="py-4 px-2 text-white font-semibold hover:text-gray-600">Services</a>
-            <a href="#contact" class="py-4 px-2 text-white font-semibold hover:text-gray-600">Contact</a>
+            class="z-50 hidden md:flex flex-col md:flex-row bg-white md:bg-inherit absolute md:relative w-auto top-16 md:top-0 shadow-lg md:shadow-none inset-x-4 md:inset-x-auto items-center space-x-4 pb-4 md:pb-0">
+            <a href="#" class="py-4 px-2 md:text-white text-black font-semibold">Home</a>
+            <a href="#service" class="py-4 px-2 md:text-white text-black font-semibold hover:text-gray-600">Services</a>
+            <a href="#contact" class="py-4 px-2 md:text-white text-black font-semibold hover:text-gray-600">Contact</a>
           </div>
           <div>
             <a href="https://wa.link/imt57x" target="_blank" id="booking-btn"
@@ -58,7 +58,7 @@
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center space-x-4">
           <button id="hamburger-btn" class="outline-none mobile-menu-button" onclick="navToggle();">
-            <svg class="w-6 h-6 text-default" fill="none" stroke-linecap="round" stroke-linejoin="round"
+            <svg class="w-6 h-6 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round"
               stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
               <path d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -66,22 +66,8 @@
         </div>
       </div>
     </div>
-    <!-- mobile menu -->
-    <div class="hidden mobile-menu">
-      <ul class="">
-        <li class="active">
-          <a href="#" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a>
-        </li>
-        <li>
-          <a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500">Services</a>
-        </li>
-        <li>
-          <a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500">Contact Us</a>
-        </li>
-      </ul>
-    </div>
   </nav>
-  <section class="relative  pt-24 lg:pt-48 flex items-center bg-dark-blue">
+  <section class="relative  pt-24 lg:pt-48 flex items-center">
     <div class="container mx-auto px-4">
       <div class="flex flex-col lg:flex-row items-center justify-between gap-24">
         <div
@@ -296,7 +282,7 @@
       </div>
       <div class="text-center text-white">
         <p>
-          ©2022 All Right Reserved Pro.Assistance
+          ©2022 All Right Reserved Pro.assistants
         </p>
       </div>
     </div>
